@@ -104,12 +104,6 @@ This is the **training loss-like curve** for K-Means. WCSS decreases as K increa
 - **Y-axis:** WCSS (within-cluster sum of squares)
 - **Purpose:** Identify the elbow point; K=5 is selected
 
-![Elbow Method Code](screenshots/elbow-method/code.png)
-
-**Figure details:**
-- **Code cell:** Computes WCSS for K=1..10 using `KMeans.inertia_`
-- **Notes:** Uses `n_init=10` and `random_state=42` for stability
-
 ---
 
 ### Model Fitting Summary
@@ -135,12 +129,6 @@ Customers are grouped into 5 clusters with centroids marked by **X**.
 - **Colors:** Cluster assignments from KMeans
 - **Markers:** Centroids shown as `X`
 
-![Cluster Plot Code](screenshots/cluster-scatter-plot/code.png)
-
-**Figure details:**
-- **Code cell:** Predicts clusters and plots points + centroids
-- **Colormap:** `viridis` used for cluster colors
-
 ---
 
 ### Custom Data Prediction
@@ -152,22 +140,6 @@ The custom dataset is scaled, clustered, and assigned a `Cluster` label.
 - **What it shows:** Output table with predicted cluster labels
 - **Columns:** Age, Annual Income, Spending Score, Cluster
 - **Usage:** Demonstrates real-world prediction on new records
-
-![Custom Prediction Code](screenshots/custom-prediction/code.png)
-
-**Figure details:**
-- **Code cell:** Scales custom data using the trained `StandardScaler`
-- **Output:** Adds `Cluster` column using `kmeans.predict`
-
----
-
-### Cluster Interpretation
-
-![Cluster Interpretation](screenshots/cluster-interpretation/interpretation.png)
-
-**Figure details:**
-- **What it shows:** Human-readable labels for each cluster
-- **Basis:** Relative income and spending behavior patterns
 
 ---
 
