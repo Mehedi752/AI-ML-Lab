@@ -171,33 +171,9 @@ The custom dataset is scaled, clustered, and assigned a `Cluster` label.
   - Scale new data using the **same scaler parameters** from training
   - Run `kmeans.predict(new_scaled)`
 
-> Note: The current joblib file stores **only the KMeans model**. To reproduce predictions exactly, also save the fitted scaler (recommended for deployment).
+> Note: The current joblib file stores **only the KMeans model**.
 
 ---
-
-## 🧾 Reproducible Code Snippet
-
-```python
-import joblib
-import pandas as pd
-from sklearn.preprocessing import StandardScaler
-
-# Load dataset
-df = pd.read_csv("datasets/data.csv")
-
-# Feature selection
-X = df[["Annual Income (k$)", "Spending Score (1-100)"]]
-
-# Fit scaler and transform
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
-
-# Load trained model
-kmeans = joblib.load("model/210137_kmeans.joblib")
-
-# Predict clusters on training data (or new data after scaling)
-clusters = kmeans.predict(X_scaled)
-```
 
 ---
 
