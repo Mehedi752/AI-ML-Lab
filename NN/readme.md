@@ -71,7 +71,7 @@ Both models are evaluated on:
 - F1-score
 - ROC-AUC
 
-## Screenshot-Based Results and Interpretation
+## Main Parts Results and Interpretation
 
 ### 1) Training History
 ![Training History](screenshots/training-history.png)
@@ -107,13 +107,6 @@ The sample table displays actual labels, predicted labels, and class probabiliti
 - The shallow model provides a strong baseline with simpler structure.
 - The deep model can capture richer non-linear patterns and may improve AUC/F1 when tuned properly.
 - Best model selection should be based on validation/test behavior and not depth alone.
-
-## Reproducibility Notes
-- Ensure required Python libraries are installed:
-	- pandas, numpy, matplotlib, seaborn
-	- torch
-	- scikit-learn
-- Run all notebook cells in order for consistent preprocessing, training, and evaluation outputs.
 
 ## Folder Structure
 NN/
